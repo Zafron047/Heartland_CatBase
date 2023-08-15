@@ -92,6 +92,9 @@ DELETE FROM animals;
 -- then roll back the transaction
 ROLLBACK;
 
+-- After the rollback verify if all records in the animals table still exists.
+SELECT COUNT(*) FROM animals;
+
 -- Task 4 =======>>
 -- Inside a transaction:
 BEGIN;
