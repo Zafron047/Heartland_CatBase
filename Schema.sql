@@ -24,6 +24,6 @@ ADD PRIMARY KEY (id);
 ALTER TABLE animals
 ADD COLUMN spices VARCHAR(255);
 
--- Fix name issue
+-- Rename column name
 ALTER TABLE animals
 RENAME COLUMN spices TO species;
