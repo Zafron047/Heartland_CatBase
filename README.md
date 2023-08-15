@@ -79,6 +79,7 @@ Clone this repository to your desired folder:
 
 <!-- FUTURE FEATURES -->
 
+## 🔭 Future Features <a name="future-features"></a>
 Features will be added to the project: **New Tables**
 
 - **animal's owners**
