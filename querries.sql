@@ -117,3 +117,30 @@ WHERE weight_kg < 0;
 
 -- 6# Commit transaction
 COMMIT;
+
+-- Task 5 =======>>
+-- Write queries to answer the following questions:
+-- 1# How many animals are there?
+SELECT COUNT(*) AS nums_of_animals FROM animals;
+
+-- 2# How many animals have never tried to escape?
+SELECT COUNT(*) AS zero_escape FROM animals
+WHERE escape_attempts = 0;
+
+-- 3# What is the average weight of animals?
+SELECT AVG(weight_kg) AS avg_weight FROM animals;
+
+-- 4# Who escapes the most, neutered or not neutered animals?
+SELECT neutered FROM animals
+GROUP BY neutered
+ORDER BY SUM(escape_attempts) DESC
+LIMIT 1;
+
+-- 5# What is the minimum and maximum weight of each type of animal?
+SELECT Species, MIN(weight_kg), MAX(weight_kg) FROM animals
+GROUP BY Species;
+
+-- 6# What is the average number of escape attempts per animal type of those born between 1990 and 2000?
+SELECT Species, AVG(escape_attempts) FROM animals
+WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31'
+GROUP BY Species;
