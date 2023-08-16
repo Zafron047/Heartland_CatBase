@@ -27,3 +27,18 @@ ADD COLUMN spices VARCHAR(255);
 -- Rename column name
 ALTER TABLE animals
 RENAME COLUMN spices TO species;
+
+-- Day 3
+-- Create a table named owners with the following columns:
+-- 	id: integer (set it as autoincremented PRIMARY KEY)
+-- 	full_name: string
+-- 	age: integer
+-- Create a table named species with the following columns:
+-- 	id: integer (set it as autoincremented PRIMARY KEY)
+-- 	name: string
+-- Modify animals table:
+-- 	Make sure that id is set as autoincremented PRIMARY KEY
+-- 	Remove column species
+-- 	Add column species_id which is a foreign key referencing species table
+-- 	Add column owner_id which is a foreign key referencing the owners table
+-- Remember all this goes in schema.sql file.

@@ -147,3 +147,14 @@ GROUP BY Species;
 SELECT Species, AVG(escape_attempts) FROM animals
 WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31'
 GROUP BY Species;
+
+-- Day 3
+-- Write queries (using JOIN) to answer the following questions:
+--   What animals belong to Melody Pond?
+--   List of all animals that are pokemon (their type is Pokemon).
+--   List all owners and their animals, remember to include those that don't own any animal.
+--   How many animals are there per species?
+--   List all Digimon owned by Jennifer Orwell.
+--   List all animals owned by Dean Winchester that haven't tried to escape.
+--   Who owns the most animals?
+-- Remember all these should be written in queries.sql file.
