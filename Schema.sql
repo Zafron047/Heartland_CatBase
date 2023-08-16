@@ -33,12 +33,39 @@ RENAME COLUMN spices TO species;
 -- 	id: integer (set it as autoincremented PRIMARY KEY)
 -- 	full_name: string
 -- 	age: integer
+CREATE TABLE owners(
+	id SERIAL PRIMARY KEY, 
+	full_name VARCHAR(255), 
+	age INT
+);
+-- DONE
+
 -- Create a table named species with the following columns:
 -- 	id: integer (set it as autoincremented PRIMARY KEY)
 -- 	name: string
+CREATE TABLE species(
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(255)
+);
+-- DONE
+
 -- Modify animals table:
 -- 	Make sure that id is set as autoincremented PRIMARY KEY
--- 	Remove column species
--- 	Add column species_id which is a foreign key referencing species table
+-- Type SERIAL to column id was set immidiately after creating animals table. 
+-- Please see line 12 - 19.
+-- DONE
+
+-- 	Remove column species from animals table:
+ALTER TABLE animals
+DROP COLUMN species;
+-- DONE
+
+-- 	Add column species_id into animals table which is a foreign key referencing species table
+ALTER TABLE animals
+ADD COLUMN species_id INT REFERENCES species(id);
+-- DONE
+
 -- 	Add column owner_id which is a foreign key referencing the owners table
--- Remember all this goes in schema.sql file.
+ALTER TABLE animals
+ADD COLUMN owner_id INT REFERENCES owners(id);
+-- DONE
