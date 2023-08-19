@@ -73,7 +73,7 @@ Clone this repository to your desired folder:
 
 👤 MD. Nohain Islam
 - GitHub: [&nbsp; &nbsp; @githubhandle](https://github.com/Zafron047)
-- Twitter: [&nbsp; &nbsp; @twitterhandle](https://https://twitter.com/NohainZ)
+- Twitter: [&nbsp; &nbsp; @twitterhandle](https://twitter.com/NohainZ)
 - LinkedIn: [&nbsp; LinkedIn](https://www.linkedin.com/in/nohain-islam/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
