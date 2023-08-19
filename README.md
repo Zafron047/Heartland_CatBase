@@ -38,6 +38,9 @@ The Heartland Humane CatVet Database Project is a practice project designed to s
 Key features of the application.
 
 - **animals Table**
+- **animals owners**
+- **specialists**
+- **visits**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -82,9 +85,7 @@ Clone this repository to your desired folder:
 ## 🔭 Future Features <a name="future-features"></a>
 Features will be added to the project: **New Tables**
 
-- **animal's owners**
-- **clinic employees**
-- **visits**
+- **Not yet determined**
 
 <!-- CONTRIBUTING -->
 
