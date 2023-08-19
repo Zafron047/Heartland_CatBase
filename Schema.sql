@@ -70,6 +70,7 @@ ALTER TABLE animals
 ADD COLUMN owner_id INT REFERENCES owners(id);
 -- DONE
 
+-- Day 4
 -- - Create a table named `vets` with the following columns:
 --   - `id`: integer (set it as autoincremented PRIMARY KEY)
 --   - `name`: string
