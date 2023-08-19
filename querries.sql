@@ -151,10 +151,51 @@ GROUP BY Species;
 -- Day 3
 -- Write queries (using JOIN) to answer the following questions:
 --   What animals belong to Melody Pond?
+SELECT animals.id AS id, name AS name, owner_id AS owner_id, full_name AS owner_name
+FROM animals
+INNER JOIN owners ON animals.owner_id = owners.id
+WHERE full_name = 'Melody Pond';
+-- DONE
+
 --   List of all animals that are pokemon (their type is Pokemon).
+SELECT animals.id AS id, animals.name as animal_name, species_id AS specie_id, species.name AS specie_type
+FROM animals
+INNER JOIN species ON animals.species_id = species.id 
+WHERE species.name = 'Pokemon';
+-- DONE
+
 --   List all owners and their animals, remember to include those that don't own any animal.
+SELECT owners.id AS owner_id, full_name AS owner_name, animals.id AS animal_id, name as animal_name
+FROM animals
+RIGHT JOIN owners ON animals.owner_id = owners.id;
+-- DONE
+
 --   How many animals are there per species?
+SELECT species.name As specie, COUNT(species.name) AS count
+FROM animals
+INNER JOIN species ON animals.species_id = species.id
+GROUP BY species.name;
+-- DONE
+
 --   List all Digimon owned by Jennifer Orwell.
+SELECT animals.name, owners.full_name
+FROM animals
+INNER JOIN owners ON animals.owner_id = owners.id
+INNER JOIN species ON animals.species_id = species.id
+WHERE owners.full_name = 'Jennifer Orwell';
+-- DONE
+
 --   List all animals owned by Dean Winchester that haven't tried to escape.
+SELECT animals.name AS animal_no_escape, owners.full_name AS owns_by
+FROM animals
+INNER JOIN owners ON animals.owner_id = owners.id
+WHERE escape_attempts = 0 AND owners.full_name = 'Dean Winchester';
+-- DONE
+
 --   Who owns the most animals?
--- Remember all these should be written in queries.sql file.
+SELECT owners.full_name AS owned_by, COUNT(owners.full_name) AS total
+FROM animals
+INNER JOIN owners ON animals.owner_id = owners.id
+GROUP BY owners.full_name
+ORDER BY total DESC;
+-- DONE
