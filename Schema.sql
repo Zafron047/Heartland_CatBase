@@ -104,3 +104,17 @@ CREATE TABLE visits (
   vet_id INT REFERENCES vets(id),
   visit_date DATE
 );
+
+-- Another way:
+CREATE TABLE visits (
+  animals_id INT,
+  vet_id INT,
+  visit_date DATE,
+	CONSTRAINT animals_id_fkey FOREIGN key(animals_id) REFERENCES animals(id),
+	CONSTRAINT vet_id_fkey FOREIGN KEY(vet_id) REFERENCES vets(id)
+);
+
+-- If CONSTRAINT for visits were not set while creating visits TABLE
+ALTER TABLE visits
+ADD	CONSTRAINT animals_id_fkey FOREIGN KEY(animals_id) REFERENCES animals(id),
+ADD	CONSTRAINT vet_id_fkey FOREIGN KEY(vet_id) REFERENCES vets(id);
