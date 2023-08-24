@@ -42,3 +42,11 @@ CREATE TABLE invoice_items (
   CONSTRAINT invoice_id_fk FOREIGN KEY(invoice_id) REFERENCES invoices(id),
   CONSTRAINT treatment_id_fk FOREIGN KEY(treatment_id) REFERENCES treatments(id)
 );
+
+-- Craete a Many to many table between medical_histories and treatments
+CREATE medical_treatments (
+  medical_histories_id INT,
+  treatments_id INT,
+  CONSTRAINT medical_histories_id_fk FOREIGN KEY(medical_histories_id) REFERENCES medical_histories(id),
+  CONSTRAINT treatment_id_fk FOREIGN KEY(treatments_id) REFERENCES treatments(id)
+);
